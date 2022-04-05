@@ -3,12 +3,7 @@ import io from 'socket.io-client';
 import { useState } from 'react';
 import Chat from './Chat';
 
-const socket = io.connect('https://socket-io-chat-server-long.herokuapp.com/', {
-  withCredentials: true,
-  extraHeaders: {
-    "Access-Control-Allow-Origin": "https://socket-io-chat-long.netlify.app"
-  }
-});
+const socket = io.connect('/');
 
 function App() {
   const [username, setUsername] = useState('');
