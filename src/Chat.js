@@ -35,7 +35,7 @@ function Chat({socket, username, room}) {
                 <ScrollToBottom className='message-container'>
                 {messageList.map((messageContent)=>{
                     return (
-                    <div className="message" id={username === messageContent.author ? 'you' : 'other'}> 
+                    <div className="message" id={username === messageContent.author ? 'other' : 'you'}> 
                             <div>
                             <div className="message-content">
                                 <p>{messageContent.message}</p>
